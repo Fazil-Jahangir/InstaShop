@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">InstaShop</string>
+    <string name="button1_name">Login</string>
+    <string name="button2_name">Scan</string>
+    <string name="image_desc">Logo</string>
+    <string name="scan_button">BEGIN SCAN</string>
+
+</resources>
