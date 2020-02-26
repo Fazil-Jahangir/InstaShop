@@ -1,2 +1,2 @@
-# InstaShop - a mobile application for fast shopping checkout!
+# InstaShop - an andriod application for fast shopping checkout!
 by Fazil Jahangir
