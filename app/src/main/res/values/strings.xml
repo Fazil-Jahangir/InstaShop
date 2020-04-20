@@ -4,5 +4,7 @@
     <string name="button2_name">Scan</string>
     <string name="image_desc">Logo</string>
     <string name="scan_button">BEGIN SCAN</string>
+    <string name="scan_message">Place the barcode in the center!</string>
+
 
 </resources>

@@ -1,31 +1,34 @@
 package com.example.instashop;
 
-import android.os.Bundle;
-import android.util.SparseArray;
 import android.Manifest;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.core.app.ActivityCompat;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
-import androidx.appcompat.app.AppCompatActivity;
 import java.io.IOException;
 
 public class ScanActivity extends AppCompatActivity
 {
     SurfaceView surfaceView;
     TextView textViewBarCodeValue;
-    private BarcodeDetector barcodeDetector;
+    BarcodeDetector barcodeDetector;
     private CameraSource cameraSource;
     private static final int REQUEST_CAMERA_PERMISSION = 201;
     String intentData = "";
@@ -103,9 +106,23 @@ public class ScanActivity extends AppCompatActivity
                 intentData = barCode.valueAt(0).displayValue;
                 textViewBarCodeValue.setText(intentData);
                 copyToClipBoard(intentData);
+                barcodeChecker(intentData);
             }
         });
     }
+
+    private void barcodeChecker(String temp)
+    {
+        if(temp.equals("096619756803"))
+        {
+            onPause();
+            Toast.makeText(getApplicationContext(), "MATCHED!!!!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ScanActivity.this, CartActivity.class);
+            intent.putExtra("code", intentData);
+            startActivity(intent);
+        }
+    }
+
 
 
     @Override
@@ -122,7 +139,7 @@ public class ScanActivity extends AppCompatActivity
 
     private void copyToClipBoard(String text){
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText("QR code Scanner", text);
+        ClipData clip = ClipData.newPlainText("Barcode Scanner", text);
         clipboard.setPrimaryClip(clip);
     }
 
@@ -138,11 +155,4 @@ public class ScanActivity extends AppCompatActivity
             finish();
     }
 }
-
-
-
-
-
-
-
 
