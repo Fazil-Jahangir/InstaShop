@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SplashActivity extends AppCompatActivity
 {
     //Delay time variable (3000 = 3 seconds)
-    private final int splash_delay = 1000;
+    private final int splash_delay = 500;
 
     //Widget field
     private ImageView imageView;

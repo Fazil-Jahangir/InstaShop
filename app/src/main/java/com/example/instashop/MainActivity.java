@@ -1,10 +1,14 @@
 package com.example.instashop;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.instashop.Database.Database;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity
 
     public void openScanApp()
     {
+        new Database(getBaseContext()).cleanCart();
         Intent intent = new Intent(this, ScanActivity.class);
         startActivity(intent);
     }

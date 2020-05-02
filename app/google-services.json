@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "163144455285",
+    "firebase_url": "https://instashop-8ac98.firebaseio.com",
+    "project_id": "instashop-8ac98",
+    "storage_bucket": "instashop-8ac98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163144455285:android:fab24d96db0df84ccc143c",
+        "android_client_info": {
+          "package_name": "com.example.instashop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163144455285-0unp1r2d2bvajp1i9dq1h57g2k7eqklr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instashop",
+            "certificate_hash": "a830a039735777fd1e210f1511b46db68f14beca"
+          }
+        },
+        {
+          "client_id": "163144455285-m4u9feanu87hhnfiuhihsquo2sm36uph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFD72miywZQ4Ab7yw7h-Atbfw7O-Tk3a4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163144455285-m4u9feanu87hhnfiuhihsquo2sm36uph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

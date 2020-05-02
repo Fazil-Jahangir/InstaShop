@@ -5,6 +5,9 @@
     <string name="image_desc">Logo</string>
     <string name="scan_button">BEGIN SCAN</string>
     <string name="scan_message">Place the barcode in the center!</string>
-
+    <string name="product_name">Product Name: </string>
+    <string name="product_cost">Cost: </string>
+    <string name="product_quantity">1</string>
+    <string name="product_total">Total: "</string>
 
 </resources>

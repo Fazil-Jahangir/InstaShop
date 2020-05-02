@@ -38,14 +38,22 @@
         <activity
             android:name=".ScanActivity"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light">
         </activity>
 
         <activity
             android:name=".CartActivity"
+            android:parentActivityName=".ScanActivity"
             android:screenOrientation="fullSensor"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light">
         </activity>
+
+        <activity
+            android:name=".CheckoutActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
+
 
     </application>
 </manifest>
